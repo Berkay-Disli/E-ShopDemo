@@ -10,6 +10,7 @@ import SwiftUI
 struct TabManager: View {
     
     @EnvironmentObject var navVM: NavigationViewModel
+    @State private var showSheet = true
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -42,6 +43,13 @@ struct TabManager: View {
             
         }
         .edgesIgnoringSafeArea(.bottom)
+        .onAppear(perform: {
+            navVM.showSheet()
+        })
+        .sheet(isPresented: $navVM.showBirthdaySheet) {
+            Birthday()
+                .presentationDetents([.height(420)])
+        }
     }
 }
 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Onboarding: View {
-    @State private var user = "Doruk"
+    @State private var user = "Leyla"
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()

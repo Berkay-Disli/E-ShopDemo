@@ -121,3 +121,41 @@ enum WideFeatured: String, CaseIterable {
         }
     }
 }
+
+enum Presents: String, CaseIterable {
+    case one, two, three, four, five, six
+    
+    var discounts: String {
+        switch self {
+        case .one:
+            return "-%15"
+        case .two:
+            return "-%15"
+        case .three:
+            return "-%10"
+        case .four:
+            return "-%10"
+        case .five:
+            return "-%10"
+        case .six:
+            return "-%10"
+        }
+    }
+    
+    var url: URL {
+        switch self {
+        case .one:
+            return URL(string: "https://cdn.lorem.space/images/fashion/.cache/640x480/thought-catalog-mPE2I7afQiw-unsplash.jpg")!
+        case .two:
+            return URL(string: "https://cdn.lorem.space/images/fashion/.cache/640x480/abbat--cqCezclrfs-unsplash.jpg")!
+        case .three:
+            return URL(string: "https://cdn.lorem.space/images/fashion/.cache/640x480/ian-dooley-TT-ROxWj9nA-unsplash.jpg")!
+        case .four:
+            return URL(string: "https://cdn.lorem.space/images/fashion/.cache/640x480/brooke-cagle-z1B9f48F5dc-unsplash.jpg")!
+        case .five:
+            return URL(string: "https://cdn.lorem.space/images/fashion/.cache/640x480/roland-hechanova-1eedDSknxoY-unsplash.jpg")!
+        case .six:
+            return URL(string: "https://cdn.lorem.space/images/fashion/.cache/640x480/leon-ell-C8Q_zR8PDlA-unsplash.jpg")!
+        }
+    }
+}

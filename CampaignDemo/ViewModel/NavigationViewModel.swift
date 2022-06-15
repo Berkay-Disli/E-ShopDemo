@@ -11,6 +11,9 @@ class NavigationViewModel: ObservableObject {
     
     @Published var tabSelection: Tabs = .shop
     @Published var onboarding = true
+    @Published var showBalloon = true
+    @Published var balloonAnimation = false
+    @Published var showBirthdaySheet = false
     
     init() {
         onboardStarted()
@@ -23,6 +26,20 @@ class NavigationViewModel: ObservableObject {
     func onboardStarted() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.onboarding = false
+        }
+    }
+    
+    func popBalloon() {
+        showBalloon = false
+    }
+    
+    func animateBalloon() {
+        balloonAnimation.toggle()
+    }
+    
+    func showSheet() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.showBirthdaySheet = true
         }
     }
 }
