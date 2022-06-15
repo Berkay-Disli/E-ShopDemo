@@ -12,6 +12,7 @@ struct CampaignDemoApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(NavigationViewModel())
         }
     }
 }

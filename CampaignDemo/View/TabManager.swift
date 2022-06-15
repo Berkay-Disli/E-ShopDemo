@@ -1,0 +1,53 @@
+//
+//  TabManager.swift
+//  CampaignDemo
+//
+//  Created by Berkay Disli on 15.06.2022.
+//
+
+import SwiftUI
+
+struct TabManager: View {
+    
+    @EnvironmentObject var navVM: NavigationViewModel
+    
+    var body: some View {
+        ZStack(alignment: .bottom) {
+            
+            Shop()
+            
+            VStack(spacing: 0) {
+                Divider()
+                HStack(spacing: 33){
+                    ForEach(Tabs.allCases, id: \.self) { tab in
+                        VStack(spacing: 4) {
+                            Image(systemName: tab.icon)
+                                .font(.system(size: 28))
+                            Text(tab.title)
+                                .font(.callout)
+                        }
+                        .padding(.vertical, 4)
+                        .foregroundColor(navVM.tabSelection == tab ? .black:.black.opacity(0.46))
+                        .onTapGesture {
+                            withAnimation(.easeInOut) {
+                                navVM.setTab(tab: tab)
+                            }
+                        }
+                    }
+                }
+                .padding(.top, 8)
+                .frame(width: UIScreen.main.bounds.width, height: 100, alignment: .top)
+                .background(.white)
+            }
+            
+        }
+        .edgesIgnoringSafeArea(.bottom)
+    }
+}
+
+struct TabManager_Previews: PreviewProvider {
+    static var previews: some View {
+        TabManager()
+            .environmentObject(NavigationViewModel())
+    }
+}
