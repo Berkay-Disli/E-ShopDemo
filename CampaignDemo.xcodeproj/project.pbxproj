@@ -18,6 +18,7 @@
 		237DEBA32859EBB500B14BDF /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DEBA22859EBB500B14BDF /* Shop.swift */; };
 		237DEBA52859ED8900B14BDF /* Cases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DEBA42859ED8900B14BDF /* Cases.swift */; };
 		239B1BA2285A7BFE00A0C895 /* Birthday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239B1BA1285A7BFE00A0C895 /* Birthday.swift */; };
+		239B1BA4285A907C00A0C895 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239B1BA3285A907C00A0C895 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		237DEBA22859EBB500B14BDF /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		237DEBA42859ED8900B14BDF /* Cases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cases.swift; sourceTree = "<group>"; };
 		239B1BA1285A7BFE00A0C895 /* Birthday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birthday.swift; sourceTree = "<group>"; };
+		239B1BA3285A907C00A0C895 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				237DEBA22859EBB500B14BDF /* Shop.swift */,
 				23654166285A0B4900A8612F /* TabManager.swift */,
 				239B1BA1285A7BFE00A0C895 /* Birthday.swift */,
+				239B1BA3285A907C00A0C895 /* Launch Screen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				239B1BA4285A907C00A0C895 /* Launch Screen.storyboard in Resources */,
 				237DEB972859E9E100B14BDF /* Preview Assets.xcassets in Resources */,
 				237DEB942859E9E100B14BDF /* Assets.xcassets in Resources */,
 			);
@@ -329,6 +333,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +363,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
