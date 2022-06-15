@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var navVM: NavigationViewModel
+    
     var body: some View {
-        VStack {
+        if !navVM.onboarding {
             TabManager()
+                .transition(AnyTransition.opacity.animation(.easeInOut))
+        } else {
+            Onboarding()
+                .transition(AnyTransition.opacity.animation(.easeInOut))
         }
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Onboarding: View {
-    @State private var user = "Leyla"
+    @State private var user = "Doruk"
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
@@ -21,7 +21,7 @@ struct Onboarding: View {
             .fontWeight(.medium)
             .foregroundColor(.white)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal)
+            .padding(.horizontal, 27)
             
             VStack {
                 Spacer()
