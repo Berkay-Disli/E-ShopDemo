@@ -84,23 +84,28 @@ struct Shop: View {
                         
                         VStack(spacing: 3) {
                             ForEach(WideFeatured.allCases, id: \.self) { item in
-                                ZStack {
-                                    Color.black.opacity(0.85)
-                                        .frame(height: 130)
-                                    HStack {
-                                        Text(item.title)
-                                            .font(.title2).fontWeight(.medium)
-                                            .foregroundColor(.white)
-                                        Spacer()
-                                        KFImage(item.url)
-                                            .resizable()
-                                            .scaledToFit()
-                                            .clipShape(Circle())
-                                            .frame(width: 128, height: 128)
-                                            .shadow(color: .gray.opacity(0.2), radius: 5, x: 0, y: 5)
+                                NavigationLink {
+                                    ShoppingList()
+                                } label: {
+                                    ZStack {
+                                        Color.black.opacity(0.85)
+                                            .frame(height: 130)
+                                        HStack {
+                                            Text(item.title)
+                                                .font(.title2).fontWeight(.medium)
+                                                .foregroundColor(.white)
+                                            Spacer()
+                                            KFImage(item.url)
+                                                .resizable()
+                                                .scaledToFit()
+                                                .clipShape(Circle())
+                                                .frame(width: 128, height: 128)
+                                                .shadow(color: .gray.opacity(0.2), radius: 5, x: 0, y: 5)
+                                        }
+                                        .padding(.horizontal, 27)
                                     }
-                                    .padding(.horizontal, 27)
                                 }
+
                             }
                         }
                         .padding(.top, 27)

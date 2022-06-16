@@ -159,3 +159,24 @@ enum Presents: String, CaseIterable {
         }
     }
 }
+
+enum ShoesCategories: String, CaseIterable {
+    case all, new, sneakers, runners, basketball, classic
+    
+    var title: String {
+        switch self {
+        case .all:
+            return "All"
+        case .new:
+            return "New Shoes"
+        case .sneakers:
+            return "Sneakers"
+        case .runners:
+            return "Runners"
+        case .basketball:
+            return "Basketball"
+        case .classic:
+            return "Classic"
+        }
+    }
+}
