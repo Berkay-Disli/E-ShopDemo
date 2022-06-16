@@ -12,6 +12,8 @@ struct ShoppingList: View {
     @Environment(\.dismiss) var dismiss
     @State private var categorySelection: ShoesCategories = .all
     @StateObject var productVM = ProductViewModel()
+    @State private var goToDetails = false
+    @EnvironmentObject var navVM: NavigationViewModel
     
     let columns = [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 20)]
     
@@ -43,23 +45,29 @@ struct ShoppingList: View {
             ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: columns, spacing: 40) {
                     ForEach(productVM.productsToShow, id:\.self) { item in
-                        VStack(alignment: .leading, spacing: 15) {
-                            KFImage(URL(string: item.images[0]))
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 210)
-                            
-                            VStack(alignment: .leading, spacing: 10) {
-                                Text(item.title)
-                                Text("5 Colours")
-                                    .fontWeight(.regular)
-                                    .foregroundColor(.gray)
-                                Text("US$\(item.price)")
+                        NavigationLink {
+                            ProductDetails(product: item)
+                        } label: {
+                            VStack(alignment: .leading, spacing: 15) {
+                                KFImage(URL(string: item.images[0]))
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 210)
+                                
+                                VStack(alignment: .leading, spacing: 10) {
+                                    Text(item.title)
+                                    Text("5 Colours")
+                                        .fontWeight(.regular)
+                                        .foregroundColor(.gray)
+                                    Text("US$\(item.price)")
+                                }
+                                .foregroundColor(.black)
+                                .fontWeight(.medium)
+                                .padding(.leading)
                             }
-                            .fontWeight(.medium)
-                            .padding(.leading)
+                            .frame(height: 250)
                         }
-                        .frame(height: 250)
+
                     }
                 }
             }
@@ -67,6 +75,9 @@ struct ShoppingList: View {
             
             
         }
+        .onAppear(perform: {
+            navVM.openTabBar()
+        })
         .navigationTitle("Shoes")
         .navigationBarBackButtonHidden(true)
         .navigationBarTitleDisplayMode(.inline)

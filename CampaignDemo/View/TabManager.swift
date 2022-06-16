@@ -17,28 +17,31 @@ struct TabManager: View {
             
             Shop()
             
-            VStack(spacing: 0) {
-                Divider()
-                HStack(spacing: 33){
-                    ForEach(Tabs.allCases, id: \.self) { tab in
-                        VStack(spacing: 4) {
-                            Image(systemName: tab.icon)
-                                .font(.system(size: 28))
-                            Text(tab.title)
-                                .font(.callout)
-                        }
-                        .padding(.vertical, 4)
-                        .foregroundColor(navVM.tabSelection == tab ? .black:.black.opacity(0.46))
-                        .onTapGesture {
-                            withAnimation(.easeInOut) {
-                                navVM.setTab(tab: tab)
+            if navVM.showTabBar {
+                VStack(spacing: 0) {
+                    Divider()
+                    HStack(spacing: 33){
+                        ForEach(Tabs.allCases, id: \.self) { tab in
+                            VStack(spacing: 4) {
+                                Image(systemName: tab.icon)
+                                    .font(.system(size: 28))
+                                Text(tab.title)
+                                    .font(.callout)
+                            }
+                            .padding(.vertical, 4)
+                            .foregroundColor(navVM.tabSelection == tab ? .black:.black.opacity(0.46))
+                            .onTapGesture {
+                                withAnimation(.easeInOut) {
+                                    navVM.setTab(tab: tab)
+                                }
                             }
                         }
                     }
+                    .padding(.top, 8)
+                    .frame(width: UIScreen.main.bounds.width, height: 100, alignment: .top)
+                    .background(.white)
                 }
-                .padding(.top, 8)
-                .frame(width: UIScreen.main.bounds.width, height: 100, alignment: .top)
-                .background(.white)
+                .transition(AnyTransition.scale.animation(.easeInOut))
             }
             
         }

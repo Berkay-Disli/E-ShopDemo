@@ -14,9 +14,18 @@ class NavigationViewModel: ObservableObject {
     @Published var showBalloon = true
     @Published var balloonAnimation = false
     @Published var showBirthdaySheet = false
+    @Published var showTabBar = true
     
     init() {
         onboardStarted()
+    }
+    
+    func openTabBar() {
+        showTabBar = true
+    }
+    
+    func closeTabBar() {
+        showTabBar = false
     }
     
     func setTab(tab: Tabs) {

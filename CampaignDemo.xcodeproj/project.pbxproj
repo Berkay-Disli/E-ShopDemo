@@ -20,6 +20,7 @@
 		237DEBA12859EA4E00B14BDF /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DEBA02859EA4E00B14BDF /* Onboarding.swift */; };
 		237DEBA32859EBB500B14BDF /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DEBA22859EBB500B14BDF /* Shop.swift */; };
 		237DEBA52859ED8900B14BDF /* Cases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DEBA42859ED8900B14BDF /* Cases.swift */; };
+		238B8022285B3F4200F0C73E /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238B8021285B3F4200F0C73E /* ProductDetails.swift */; };
 		239B1BA2285A7BFE00A0C895 /* Birthday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239B1BA1285A7BFE00A0C895 /* Birthday.swift */; };
 		239B1BA4285A907C00A0C895 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239B1BA3285A907C00A0C895 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		237DEBA02859EA4E00B14BDF /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		237DEBA22859EBB500B14BDF /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		237DEBA42859ED8900B14BDF /* Cases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cases.swift; sourceTree = "<group>"; };
+		238B8021285B3F4200F0C73E /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
 		239B1BA1285A7BFE00A0C895 /* Birthday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birthday.swift; sourceTree = "<group>"; };
 		239B1BA3285A907C00A0C895 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 				239B1BA1285A7BFE00A0C895 /* Birthday.swift */,
 				2331385A285B336700137A5E /* ShoppingList.swift */,
 				239B1BA3285A907C00A0C895 /* Launch Screen.storyboard */,
+				238B8021285B3F4200F0C73E /* ProductDetails.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				23654169285A0C1D00A8612F /* NavigationViewModel.swift in Sources */,
 				237DEBA32859EBB500B14BDF /* Shop.swift in Sources */,
 				237DEB902859E9E100B14BDF /* CampaignDemoApp.swift in Sources */,
+				238B8022285B3F4200F0C73E /* ProductDetails.swift in Sources */,
 				23654167285A0B4900A8612F /* TabManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
