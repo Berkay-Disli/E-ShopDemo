@@ -58,19 +58,48 @@ struct ProductDetails: View {
                     ButtonComp(color: .white, textColor: .black, text: "Favourite", iconname: "heart", iconColor: .black)
                 }
                 
-                .onAppear(perform: {
-                    navVM.closeTabBar()
-                })
-                .navigationTitle(product.title)
-                .navigationBarBackButtonHidden(true)
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Image(systemName: "chevron.left")
-                            .onTapGesture {
-                                dismiss()
-                            }
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Get Your Gear Faster")
+                        .fontWeight(.medium)
+                    HStack {
+                        Text("Look for store pickup at checkout.")
+                        Spacer()
+                        Image(systemName: "chevron.right")
                     }
+                }
+                .padding(.horizontal)
+                .frame(height: 100)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(.gray.opacity(0.17))
+                .padding(.horizontal)
+                .padding(.vertical, 40)
+                
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("Delivery")
+                        .fontWeight(.medium)
+                    
+                    Text("To get accurate delivery information")
+                    
+                    Text("Edit Location")
+                        .fontWeight(.medium)
+                        .underline()
+                        .padding(.bottom)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading)
+            }
+            .onAppear(perform: {
+                navVM.closeTabBar()
+            })
+            .navigationTitle(product.title)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Image(systemName: "chevron.left")
+                        .onTapGesture {
+                            dismiss()
+                        }
                 }
             }
         }
